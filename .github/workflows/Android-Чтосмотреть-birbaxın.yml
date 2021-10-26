@@ -27,7 +27,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【jckkz】'
-        if: env.zqlookStartbody
+        if: env.lookStartbody
         run: |
           node jckkz.js
         env:
@@ -35,7 +35,7 @@ jobs:
           jc_cookie: ${{ secrets.JC_COOKIE }}
 
       - name: '运行 【jckkz二】'
-        if: env.zqlookStartbody2
+        if: env.lookStartbody2
         run: |
           node jckkz.js
         env:
@@ -43,7 +43,7 @@ jobs:
           jc_cookie: ${{ secrets.JC_COOKIE }}
 
       - name: '运行 【jckkz三】'
-        if: env.zqlookStartbody3
+        if: env.lookStartbody3
         run: |
           node jckkz.js
         env:
@@ -51,7 +51,7 @@ jobs:
           jc_cookie: ${{ secrets.JC_COOKIE2 }}
 
       - name: '运行 【jckkz四】'
-        if: env.zqlookStartbody4
+        if: env.lookStartbody4
         run: |
           node jckkz.js
         env:
