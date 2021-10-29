@@ -31,11 +31,11 @@ jobs:
         run: |
           node jc_share.js
         env:
-          jc_cookie: ${{ secrets.ZQ_COOKIE11 }}
+          jc_cookie: ${{ secrets.JC_COOKIE11 }}
 
       - name: '运行 【jc_share二】'
         if: env.jc_cookie2
         run: |
           node jc_share.js
         env:
-          jc_cookie: ${{ secrets.ZQ_COOKIE21 }}
+          jc_cookie: ${{ secrets.JC_COOKIE21 }}
