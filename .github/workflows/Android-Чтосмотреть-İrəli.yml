@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        jc_cookie: ${{ secrets.ZQ_COOKIE }}
-        jc_cookie2: ${{ secrets.ZQ_COOKIE2 }}
-        jc_cookie3: ${{ secrets.ZQ_COOKIE3 }}
-        jc_cookie4: ${{ secrets.ZQ_COOKIE4 }}
+        jc_cookie: ${{ secrets.JC_COOKIE }}
+        jc_cookie2: ${{ secrets.JC_COOKIE2 }}
+        jc_cookie3: ${{ secrets.JC_COOKIE3 }}
+        jc_cookie4: ${{ secrets.JC_COOKIE4 }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -34,7 +34,7 @@ jobs:
           jc_cookie: ${{ secrets.ZQ_COOKIE11 }}
 
       - name: '运行 【jc_share二】'
-        if: env.zq_cookie2
+        if: env.jc_cookie2
         run: |
           node jc_share.js
         env:
