@@ -31,7 +31,7 @@ jobs:
         run: |
           node jc_share.js
         env:
-          jc_cookie: ${{ secrets.JC_COOKIE11 }}
+          jc_cookie: ${{ secrets.JC_COOKIE }}
 
       - name: '运行 【jc_share二】'
         if: env.jc_cookie2
