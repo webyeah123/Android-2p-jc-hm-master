@@ -34,7 +34,7 @@ jobs:
           jc_cookie: ${{ secrets.JC_COOKIE }}
 
       - name: '运行 【jc_friendSign二】'
-        if: env.zq_cookie2
+        if: env.jc_cookie2
         run: |
           node jc_friendSign.js
         env:
