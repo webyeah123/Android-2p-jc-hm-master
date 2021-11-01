@@ -223,8 +223,7 @@ function lookStart(timeout = 0) {
 
                 }else{
                     console.log('\n激活看看赚任务失败')
-                    smbody = $.getdata('lookStartbody').replace(lookStartbody1 + "&", "");
-                    $.setdata(smbody, 'lookStartbody');
+                  
                     console.log("该看看赚任务已自动删除")
                 }
             } catch (e) {
