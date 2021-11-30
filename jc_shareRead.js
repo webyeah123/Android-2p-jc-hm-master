@@ -20,7 +20,7 @@ let jckdCookieArr = []
 let userCk = ''
 let readCount = 0
 
-let jckdShareNum = ($.isNode() ? process.env.jckdShareNum : $.getdata('jckdShareNum')) || 3;
+let jckdShareNum = ($.isNode() ? process.env.jckdShareNum : $.getdata('jckdShareNum')) || 5;
 
 let newsItem = ''
 let UserAgent = ''
@@ -101,7 +101,7 @@ async function showmsg() {
 
 async function checkEnv() {
     
-    if(jckdShareNum == 0) {
+    if(jckdShareNum == 10) {
         console.log('当前分享次数设置为0。如果需要开启分享阅读，请设置环境变量jckdShareNum为要被阅读的次数。')
         return false
     }
