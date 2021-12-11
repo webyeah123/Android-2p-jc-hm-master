@@ -68,6 +68,7 @@ jobs:
             'Android-Чтосмотреть-oxumaq2.yml',
             'Android-Чтосмотреть-İrəli.yml',
             'jcfxyd.yml',
+            'main.yml',
             'delete-workflow-runs.yml'
           ]
 
