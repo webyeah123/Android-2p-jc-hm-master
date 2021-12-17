@@ -1,0 +1,39 @@
+name: Android-Чтосмотреть-快手阅读
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 55 6, * * *
+  watch:
+    types: started
+  repository_dispatch:
+    types: bean_change
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+       jckdkkz_body: ${{ secrets.JCKDKKZ_BODY }}
+       jckdkkz_body2: ${{ secrets.JCKDKKZ_BODY2 }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【jckkz_helper】'
+        if: env.jckdkkz_body
+        run: |
+          node jckkz_helper.js
+        env:
+          jckdkkz_body: ${{ secrets.JCKDKKZ_BODY }}
+         
+      - name: '运行 【jckkz_helper二】'
+        if: env.jckdkkz_body2
+        run: |
+          node jckkz_helper.js
+        env:
+         jckdkkz_body: ${{ secrets.JCKDKKZ_BODY2 }}
