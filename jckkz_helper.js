@@ -4,7 +4,7 @@ boxjs: https://cdn.jsdelivr.net/gh/bluesmallpig/scripts/David.boxjs.json
 功能：只需设置一个看看赚body，自动为你生成全部body，你将不用为过一段时间就要重新抓取body而烦恼。
 */
 //每个晶彩看点账号设置一个看看赚body
-let jckdkkz_body_ = ["jckdkkz_body"]
+let jckdkkz_body = ["jckdkkz_body"]
 //TG用户编号
 let userId_ = 100000
 //授权码
