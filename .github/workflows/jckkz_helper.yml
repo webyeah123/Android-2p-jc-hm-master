@@ -1,4 +1,4 @@
-name: Android-Чтосмотреть-快手阅读
+name: Android-Чтосмотреть-精彩看看阅读获取
 on:
   workflow_dispatch:
   schedule:
