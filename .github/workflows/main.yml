@@ -25,15 +25,15 @@ jobs:
         run: |
           npm install
       - name: '运行 【ks_js】'
-        if: env.kshd
+        if: env.ksCookie
         run: |
           node ks_js.js
         env:
-          kshd: ${{ secrets.KSHD }}
+          ksCookie: ${{ secrets.KSCOOKIE }}
          
       - name: '运行 【ks_js二】'
-        if: env.kshd2
+        if: env.ksCookie2
         run: |
           node ks_js.js
         env:
-          kshd: ${{ secrets.KSHD2 }}
+          ksCookie: ${{ secrets.KSCOOKIE2 }}
